@@ -1,4 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#dd8740), to(#c53509));
+  background-image: linear-gradient(to right bottom, #dd8740, #c53509);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  min-height: 50rem;
+}
+
+.header {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f8eee7;
+  background-image: url("../img/new.jpg");
+  background-repeat: no-repeat;
+  background-size: 50rem 100%;
+  background-position: right top;
+  padding: 3rem;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: change 2s;
+          animation: change 2s;
+  -webkit-animation-delay: .0001s;
+          animation-delay: .0001s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.header__logo {
+  line-height: 2.2rem;
+  margin-bottom: 10%;
+}
+
+.header__logo-text {
+  color: #e44718;
+  font-size: 1.2rem;
+}
+
+.header__logo-heading {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 5rem;
+}
+
+.header__info-box {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: #e44718;
+  background-image: url("../img/new.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: change1 2s;
+          animation: change1 2s;
+  -webkit-animation-delay: .0001s;
+          animation-delay: .0001s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.header__info-text {
+  color: #e44718;
+  font-size: 6rem;
+  max-width: 50%;
+}
+
+.header__info-img {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
+  cursor: pointer;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.header__line {
+  width: 4rem;
+  height: 3px;
+  background-color: #e44718;
+  margin-bottom: 3%;
+}
+
+.header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__button-apple {
+  outline: none;
+  border: none;
+  margin-right: 2rem;
+  padding: 2rem;
+  font-family: "Ubuntu";
+  font-weight: 800;
+  background: #e44718;
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__button-apple:hover {
+  background: #fff;
+  color: #e44718;
+}
+
+.header__button-google {
+  outline: none;
+  border: none;
+  margin-right: 2rem;
+  padding: 2rem;
+  font-family: "Ubuntu";
+  font-weight: 800;
+  color: #c53509;
+  background-color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__button-google:hover {
+  background: #c53509;
+  color: #fff;
+}
+
+.header__container {
+  width: 68%;
+}
+
+.features {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f8eee7;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7% 7%;
+}
+
+.features__box {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__box__image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.features__box__image img {
+  width: 100%;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes change {
+  0% {
+    background-image: url("../img/b.jpg");
+  }
+  100% {
+    background-image: url("../img/k.jpg");
+  }
+}
+
+@keyframes change {
+  0% {
+    background-image: url("../img/b.jpg");
+  }
+  100% {
+    background-image: url("../img/k.jpg");
+  }
+}
+
+@-webkit-keyframes change1 {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background-image: url("../img/new.png");
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background-image: url("../img/r.png");
+  }
+}
+
+@keyframes change1 {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background-image: url("../img/new.png");
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background-image: url("../img/r.png");
+  }
 }
 /*# sourceMappingURL=main.css.map */
