@@ -1,0 +1,155 @@
+.chef {
+
+
+    &-container {
+      background-image: url('../img/ty.jpg');
+      background-repeat: no-repeat;
+      background-size:100% 100%;
+    }
+  
+    &__intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        color:$white;
+        padding-top:5%;
+  
+        &-p {
+            font-size:1.5rem;
+
+            @media only screen and (max-width:$xss) {
+              width:50%;
+              text-align:center;
+              font-size:2rem;
+            }
+        }
+  
+        &-h2 {
+            font-weight:800;
+            font-size:3.5rem;
+
+            @media only screen and (max-width:$xss) {
+              width:70%;
+              text-align:center;
+              font-size:2.5rem;
+            }
+        }
+        
+        &-line {
+            height:4px;
+            width:5rem;
+            background-color:$primary;
+            margin-bottom:4rem;
+        }
+    }
+  
+    &__cards {
+        min-height:55rem;
+        display:flex;
+        justify-content:space-evenly;
+        flex-wrap:wrap;
+        padding:1rem;
+
+        @media only screen and (max-width:$sm) {
+         flex-direction: column;
+         justify-content:center;
+         align-items:center;
+
+        }
+  
+        
+        &__card-1 {
+          @include card;
+          background-image:linear-gradient(rgba(35, 34, 34, 0.693)), url('../img/sd.jpg');
+          margin-right:1rem;
+          transition:all .2s;
+          transform:scale(0.9);   
+          border-radius:5%;
+         
+          @media only screen and (max-width:$sm) {
+           width:90%;
+
+           p {
+            font-size:2rem;
+           }
+          }
+  
+          &:hover {
+              transform:scale(1);
+              filter: grayscale(0);
+              background-image:linear-gradient(rgba(35, 34, 34, 0)), url('../img/sd.jpg');
+          }
+        }
+  
+        &__card-2 {
+          @include card;
+          background-image:linear-gradient(rgba(35, 34, 34, 0.693)), url('../img/sdd.jpg');
+          margin-right:1rem;
+          transition:all .2s;
+          transform:scale(0.9);
+          border-radius:5%;
+
+          
+          @media only screen and (max-width:$sm) {
+            width:90%;
+            p {
+              font-size:2rem;
+            }
+           }
+  
+          &:hover {
+              transform:scale(1);
+              filter: grayscale(0);
+              background-image:linear-gradient(rgba(35, 34, 34, 0)), url('../img/sdd.jpg');
+          }
+        }
+  
+        &__card-3 {
+          @include card;
+          background-image:linear-gradient(rgba(35, 34, 34, 0.693)), url('../img/sddd.jpg');
+          margin-right:1rem;
+          transition:all .2s;
+          transform:scale(0.9);
+          border-radius:5%;
+
+          @media only screen and (max-width:$sm) {
+            width:90%;
+
+            p {
+              font-size:2rem;
+            }
+           }
+  
+          &:hover {
+              transform:scale(1);
+              filter: grayscale(0);
+              background-image:linear-gradient(rgba(35, 34, 34, 0)), url('../img/sddd.jpg');
+          }
+        }
+  
+        &__card-4 {
+          @include card;
+          background-image:linear-gradient(rgba(35, 34, 34, 0.693)), url('../img/sa.jpg');
+          margin-right:1rem;
+          transition:all .2s;
+          transform:scale(0.9);
+          border-radius:5%;
+
+          @media only screen and (max-width:$sm) {
+            width:90%;
+
+            p {
+              font-size:2rem;
+            }
+         }
+
+          &:hover {
+              transform:scale(1);
+              filter: grayscale(0);
+              background-image:linear-gradient(rgba(35, 34, 34, 0)), url('../img/sa.jpg');
+          }
+        }
+      
+    }
+  }

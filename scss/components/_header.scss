@@ -1,0 +1,165 @@
+.header {
+
+    border:none;
+    padding:3rem;
+    background-color:$white;
+    animation:change 2s;
+    @include bgTest(url('../img/k.jpg'),50rem 100%,right top);
+    @include animationStyle;
+
+    @media only screen and (max-width:$landscape) {
+        animation:none;
+     }
+
+    @media only screen and (max-width:$md) {
+         background:none;
+         background-color:$white;
+    }
+
+        
+
+    &__logo {
+        line-height:2.2rem;
+        margin-bottom:10%;
+
+        @media only screen and (max-width:$sm) {
+            line-height: 2rem;
+            margin-bottom: 4%;
+         }
+
+        &-text {
+            color:$primary;
+            font-size:1.2rem;
+
+        }
+
+        &-heading {
+            font-weight:800;
+            font-size:3rem;
+        }
+    }
+
+
+    &__info {
+        display:flex;
+        justify-content:space-between;
+        line-height:5rem;
+
+        @media only screen and (max-width:$por) {
+           flex-direction:column;
+        }
+
+        @media only screen and (max-width:$sm) {
+           line-height: 4rem;
+        }
+
+        &-box {
+            width:20rem;
+            height:20rem;
+            background-color:$primary;        
+            border-radius:50%;
+            @include bgTest(url('../img/new.png'),contain,center);
+            transform:rotate(0deg);
+            transition:all 1s;
+
+            animation:change1 2s;
+            @include animationProps(ease-in-out,infinite,alternate-reverse,forwards);
+        
+            @media only screen and (max-width:$sm) {
+               display:none;
+            }
+        }
+
+        &-text {
+            color:$primary;
+            font-size:6rem;
+            max-width:50%;
+
+            @media only screen and (max-width:$sm) {
+                font-size:4rem;
+            }
+
+            @media only screen and (max-width:$por-gen) {
+                align-self:center;
+            }
+
+            @media only screen and (max-width:$por) {
+                max-width:50%;
+                text-align:center;
+             }
+
+             @media only screen and (max-width:$xss) {
+                max-width:80%;
+                text-align:center;
+              }
+        }
+
+        &-img {
+            animation:rotate 1s;
+            cursor: pointer;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count:infinite;
+        }
+    }
+
+    &__line {
+     width:4rem;
+     height:3px;
+     background-color:$primary;
+     margin-bottom:3%;
+
+     @media only screen and (max-width:$sm) {
+        width:50%;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:1rem;
+        margin-bottom:3rem;
+     }
+
+     
+    }
+
+    &__button {
+        display:flex;
+
+        @media only screen and (max-width:$sm) {
+            flex-wrap:wrap;
+          }
+
+        &-apple {
+          @include button1;
+          transition:all .3s;
+          
+          @media only screen and (max-width:$sm) {
+            flex-basis:100%;
+            margin-bottom:1.5rem;
+          }
+
+          &:hover {
+            background:#fff;
+            color:$primary;
+          } 
+        }
+        &-google {
+            @include button2;
+            transition:all .3s;
+
+            @media only screen and (max-width:$sm) {
+                flex-basis:100%;
+              }
+  
+            &:hover {
+              background:$primary-dark;
+              color:#fff;
+            } 
+          }
+    }
+
+    &__container {
+        width:68%;
+        
+        @media only screen and (max-width:$md) {
+            width:100%;
+         }
+    }
+}

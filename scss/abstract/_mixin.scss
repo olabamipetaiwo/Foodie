@@ -56,3 +56,25 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  @mixin animationStyle {
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode:forwards;
+  }
+
+  @mixin  animationProps($t,$c,$d,$m) {
+    animation-timing-function:$t;
+    animation-iteration-count: $c;
+    animation-direction:$d;
+    animation-fill-mode:$m;
+  }
+
+
+  @mixin bgTest($url,$size,$pos) {
+    background-image:$url;
+    background-repeat: no-repeat;
+    background-size:$size;
+    background-position:$pos; 
+  }

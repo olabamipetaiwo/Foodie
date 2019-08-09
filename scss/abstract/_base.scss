@@ -1,0 +1,67 @@
+$primary:#e44718;
+$primary_light:#dd8740;
+$primary_dark:#c53509;
+$white:rgb(248, 238, 231);
+$shadow_dark:0 2rem 6rem rgba(0,0,0,0.3);
+
+//media Queries
+$dt:75rem;//1200/16
+$md:56.25rem;//900
+$sm:37.5rem;//600
+$xs:18.75rem;//300
+
+$bp-largest:75rem ;//1200/16px;
+$bp-large:68.75rem;//110
+$bp-medium:56.25rem;//900
+
+//scopes
+$landscape:64rem;//1024
+$por-gen:31.25rem;//500
+$por:25rem;//400
+$xss:15.625rem;//250px;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width:$dt) {
+        font-size:50%; //1rem =8px,10px/16px * 100 = 62.45:
+    }
+
+    @media only screen and (max-width:$xss) {
+        font-size:40%;
+    }
+
+    // @media only screen and (max-width:$xss-1) {
+    //     font-size:30%;
+    // }
+ }
+
+ 
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+ }
+
+
+body {
+    @include bg;
+    background-image: linear-gradient(to right bottom, $primary_light, $primary_dark);
+    min-height: 100vh;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding:0;
+}

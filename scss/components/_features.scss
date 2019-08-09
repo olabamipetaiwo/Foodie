@@ -1,0 +1,41 @@
+.features {
+    height:auto; 
+    display:flex;
+    background-color:$white;
+    justify-content:center;
+    align-items:center;
+    padding:7% 7%;
+    border:none;
+
+    @media only screen and (max-width:$por-gen) {
+       flex-direction:column;
+    }
+
+    @media only screen and (max-width:$por) {
+        flex-direction:column;
+     }
+ 
+    &__box {
+        font-size:1.2rem;
+        margin-right:2rem;
+        text-align:center;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+
+        @media only screen and (max-width:$por) {
+            margin-bottom:2rem;
+        }
+        
+        &__image {
+             width: 10rem;
+             height:10rem;
+ 
+             img {
+                 width:100%;
+             }
+        }
+    }
+ }
+ 

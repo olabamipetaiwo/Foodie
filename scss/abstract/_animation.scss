@@ -1,0 +1,42 @@
+@keyframes rotate {
+    0% {
+    transform:rotate(0deg);
+    }
+
+    100% {
+       transform:rotate(360deg);
+    }
+}
+
+@keyframes change {
+    0% {
+        background-image: url('../img/b.jpg');
+    }
+    
+     100% {
+        background-image: url('../img/k.jpg');
+    }
+}
+@keyframes change1 {
+    0% {
+        transform:rotate(360deg);
+        background-image: url('../img/new.png');
+    }
+    
+     100% {
+        transform:rotate(0deg);
+        background-image: url('../img/r.png');
+    }
+}
+
+@keyframes move {
+    0%{
+        transform:scale(0.6);
+        // transform:translateX(-15rem); 
+    }
+
+    100% {
+        transform:scale(0.9);
+        //transform:translateX(0); 
+    }
+}
