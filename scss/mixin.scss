@@ -1,0 +1,58 @@
+@mixin button1 {
+    outline:none;
+    border:none;
+    margin-right:2rem;
+    padding:2rem;
+    font-family:"Ubuntu";
+    font-weight:800;
+    background:$primary;
+    color:#fff;
+  }
+
+  @mixin button2 {
+    outline:none;
+    border:none;
+    margin-right:2rem;
+    padding:2rem;
+    font-family:"Ubuntu";
+    font-weight:800;
+   color:$primary_dark;
+   background-color:#fff;
+  }
+
+  @mixin card {
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    width:25rem;
+    height: 50rem;
+    color:$white;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:2rem;
+    filter:grayscale(50%);
+
+    h2 {
+        font-size:3rem;
+        font-weight:800;
+        line-height:3rem;
+        margin-bottom:1rem;
+    }
+
+    p {
+        font-size:1.3rem;
+        margin-bottom:2rem;
+    }
+
+    h6 {
+        font-size:1.7rem;
+        font-weight:400;
+    }
+
+  }
+
+
+  @mixin  bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }

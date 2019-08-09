@@ -1,71 +1,10 @@
+@import "mixin";
+
 $primary:#e44718;
 $primary_light:#dd8740;
 $primary_dark:#c53509;
 $white:rgb(248, 238, 231);
 $shadow_dark:0 2rem 6rem rgba(0,0,0,0.3);
-$line:1px solid var(--grey_light_2); 
-$grey_light_1:#faf9f9;
-  $grey_light_2:#f4f2f2;
-  $grey_light_3:#f0eeee;
-  $grey_light_4:#ccc;
-  $grey_dark_1:#333;
-  $grey_dark_2:#777;
-  $grey_dark_3:#999;
-
-  @mixin button1 {
-    outline:none;
-    border:none;
-    margin-right:2rem;
-    padding:2rem;
-    font-family:"Ubuntu";
-    font-weight:800;
-    background:$primary;
-    color:#fff;
-  }
-
-  @mixin button2 {
-    outline:none;
-    border:none;
-    margin-right:2rem;
-    padding:2rem;
-    font-family:"Ubuntu";
-    font-weight:800;
-   color:$primary_dark;
-   background-color:#fff;
-  }
-
-  @mixin card {
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-    width:25rem;
-    height: 50rem;
-    color:$white;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:2rem;
-    filter:grayscale(50%);
-
-    h2 {
-        font-size:3rem;
-        font-weight:800;
-        line-height:3rem;
-        margin-bottom:1rem;
-    }
-
-    p {
-        font-size:1.3rem;
-        margin-bottom:2rem;
-    }
-
-    h6 {
-        font-size:1.7rem;
-        font-weight:400;
-    }
-
-  }
-
-
 
 * {
     margin: 0;
@@ -83,21 +22,21 @@ $grey_light_1:#faf9f9;
     box-sizing: inherit;
  }
 
- h1,h2,h3,h4,h5,h6 {
-     margin:0;
-     padding:0;
- }
-  
+
   body {
+    @include bg;
     background-image: linear-gradient(to right bottom, $primary_light, $primary_dark);
-    background-size: cover;
-    background-repeat: no-repeat;
     min-height: 100vh;
-    // font-family: 'Roboto','Lato','Open Sans',sans-serif;
     font-family: 'Ubuntu';
     font-weight: 400;
     line-height: 1.6;
 }
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding:0;
+}
+ 
 
 .line {
     background-color:$primary;
@@ -120,17 +59,15 @@ $grey_light_1:#faf9f9;
     background-image: url('../img/new.jpg');
     background-repeat: no-repeat;
     background-size:50rem 100%;
-    // background-size:70%;
     background-position: right top; 
     padding:3rem;
-
     transform:translateX(0);
-    transition:all 1s;
+
 
     animation:change 2s;
-    animation-delay: .0001s;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
     animation-fill-mode:forwards;
 
     &__logo {
@@ -172,6 +109,7 @@ $grey_light_1:#faf9f9;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-fill-mode:forwards;
+            animation-direction: alternate-reverse;
         }
 
         &-text {
@@ -420,6 +358,48 @@ $grey_light_1:#faf9f9;
                 width:10rem;
                 height: 10rem;
             }
+        }
+    }
+}
+
+.footer {
+    background-image: linear-gradient(to right bottom, $primary_light, $primary_dark);
+    color:$white;
+    padding-top:3rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    &__info {
+      //  flex-basis:50%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        margin-right:3rem;
+
+
+        h5{
+            font-size:1.2rem;
+        }
+
+        h4 {
+            font-weight:800;
+            font-size:4rem;
+            line-height:5rem;
+        }
+    }
+
+    &__box {
+       // flex-basis:10%;
+        display:flex;
+        min-width:20rem;
+        justify-content:space-between;
+        align-items:center;
+
+        &-icon {
+            width:5rem;
+            height:5rem; 
         }
     }
 }
